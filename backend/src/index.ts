@@ -15,7 +15,8 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://clientodo.netlify.app'
+  'https://clientodo.netlify.app',
+  'https://todo-client-teal.vercel.app'
 ];
 
 app.use(cors({
