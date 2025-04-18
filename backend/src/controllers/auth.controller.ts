@@ -3,13 +3,15 @@ import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import User from "../models/user.model";
 import { JWT_SECRET } from "../utils/getEnv";
+import type { CookieOptions } from 'express';
 
-const COOKIE_OPTIONS = {
+const COOKIE_OPTIONS: CookieOptions = {
   httpOnly: true,
   secure: process.env.NODE_ENV === "production",
-  sameSite: "strict" as const,
+  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
   maxAge: 1000 * 60 * 60 * 24 * 7,
 };
+
 
 // Signup
 export const signup = async (req: Request, res: Response) => {
