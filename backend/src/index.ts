@@ -15,7 +15,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://clientto.netlify.app/'
+  'https://clientodo.netlify.app'
 ];
 
 app.use(cors({
