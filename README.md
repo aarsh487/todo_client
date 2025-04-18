@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MERN Todo App Documentation</title>
+  <title>Anand Patel</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; padding: 2rem; max-width: 800px; margin: auto;">
 
