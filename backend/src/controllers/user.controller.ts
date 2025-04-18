@@ -8,9 +8,7 @@ interface AuthRequest extends Request {
 
 export const updateUserProfile = async (req: AuthRequest, res: Response) => {
     try {
-      const { id } = req.params;
-  
-      const user = await User.findById(id);
+      const user = await User.findById(req.user._id);
       if (!user) {
         res.status(404).json({ message: "User not found" });
         return;
